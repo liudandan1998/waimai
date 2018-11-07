@@ -1,0 +1,461 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: ~"calc(100vw/7.5)";
+  font-family: "楷体";
+  i{
+    font-style: normal;
+  }
+}
+header{
+  background-image: url('http://static.galileo.xiaojukeji.com/static/tms/seller_avatar_256px.jpg');
+  background-size: 100%;
+  // &::after{
+  //   content:'';
+  //   position: absolute;
+  //   left: 0;
+  //   top:0;
+  //   width: 100%;
+  //   height: 2.68rem;
+  //   opacity:0.4;
+  //   background:rgb(7,17,27);
+  // }
+  .name{
+    padding:0.48rem 0.24rem 0.36rem 0.48rem;
+    display:flex;
+    color:rgb(255,255,255);
+    position: relative;
+    img{
+      width: 1.28rem;
+      height: 1.28rem;
+      margin-right: 0.32rem;
+      border-radius:0.04rem;
+    }
+    .txt{
+      margin-top: 0.04rem;
+      h3{
+        font-size:0.32rem;
+        color:rgb(255,255,255);
+        line-height:0.36rem;
+        margin-bottom: 0.16rem;
+        display:flex;
+        span{
+          width: 0.6rem;
+          height: 0.36rem;
+          margin-right: 0.12rem;
+        }
+        img{
+          width: 0.6rem;
+          height: 0.36rem;
+        }
+      }
+      .p1{
+        font-size:0.24rem;
+        line-height: 1;
+        margin-bottom: 0.2rem;
+      }
+      .p2{
+        font-size:0.2rem;
+        line-height:0.24rem;
+        display:flex;
+        margin-bottom: 0.04rem;
+        align-items:center;
+        span{
+          width: 0.32rem;
+          height: 0.32rem;
+          margin-right: 0.08rem;
+        }
+        img{
+          width: 0.32rem;
+          height: 0.32rem;
+        }
+      }
+    }
+    .activity{
+      width: 0.8rem;
+      height: 0.20rem;
+      font-size:0.2rem;
+      color:rgb(255,255,255);
+      line-height:0.24rem;
+      background-color: rgba(0,0,0,0.2);
+      font-weight: 200;
+      padding:0.14rem 0;
+      text-align: center;
+      border-radius:0.25rem;
+      position: absolute;
+      right:0.24rem;
+      bottom:0.36rem;
+      i{
+        margin-left: 0.04rem;
+      }
+    }
+  }
+}
+.notic{
+  background-color:rgba(7,17,27,0.2);
+  width: ~"calc(100%-0.48rem)";
+  height: 0.56rem;
+  padding:0 0.24rem;
+  display:flex;
+  align-items:center;
+  img{
+    width: 0.44rem;
+    height: 0.24rem;
+    margin-right: 0.08rem;
+  }
+  .text{
+    p{
+      font-size:0.2rem;
+      line-height:0.24rem;
+      font-weight: 200;
+      width:0.88rem;
+       overflow:hidden;  /*超过部分不显示*/
+    　text-overflow:ellipsis;  /*超过部分用点点表示*/
+    　white-space:nowrap;/*不换行*/
+
+      i{
+        margin-left: 0.08rem;
+      }
+    }
+  }
+}
+.tab{
+  height: 0.8rem;
+  line-height: 0.28rem;
+  font-size: 0.28rem;
+  display: flex;
+  align-items: center;
+  border-bottom:0.04rem solid rgba(7,17,27,0.1);
+  p{
+    flex: 1;
+    text-align: center;
+    &.on{
+      color:#f00;
+    }
+  }
+}
+// .visible-window{
+//   // width: Y;
+  // .content-area{
+    .content{
+      width: 100%;
+      display: flex;
+      .swiper-container {
+        width:600px;
+        height:300px;
+      }
+      .foods_menu{
+        /*x轴超出部分隐藏*/
+        overflow-x:hidden;
+        // 设置固定高度
+        height: 8.64rem;
+        // y轴超出部分变滚动条
+        overflow-y: auto;
+        padding-right:0.24rem;
+        width: 1.6rem;
+        font-size: 0.24rem;
+
+        background:#f3f5f7;
+        h3{
+
+          // overflow:scroll;
+        width: 1.6rem;
+        height: 1.08rem;
+        padding-left:0.24rem;
+        align-items: center;
+        display:flex;
+        &.bjcolor{
+          background:#fff;
+        }
+
+        }
+        hr{
+          width: 1.12rem;
+          margin-left: .24rem;
+        }
+      }
+      .foods_list{
+      overflow-x:hidden;
+        height: 8.64rem;
+        // overflow-y: auto;
+        flex: 1;
+        position: relative;
+        .swiper-slide{
+          height:auto !important;
+        }
+        .pr{
+          position: absolute;
+
+        height: 100%;
+        top:30px;
+        }
+        p.price{
+          line-height: 0.52rem;
+          color:rgb(147,153,159);
+          height: 0.52rem;
+          font-size: 0.24rem;
+          align-items: center;
+          display:flex;
+          padding-left:0.28rem;
+          background-color:#f3f5f7;
+          border-left:0.04rem solid #d9ddee;
+        }
+        .commodity{
+          padding: 0.36rem;
+          display:flex;
+          position:relative;
+          border-bottom:1px solid rgba(7,17,27,0.1);
+          img{
+            width: 1.14rem;
+            height: 1.14rem;
+          }
+          .combo{
+            margin-left: .2rem;
+            flex:1;
+            // display: box;
+            h2{
+              font-size: 0.28rem;
+              margin-top: .04rem;
+              color:rgb(7,17,27);
+            }
+            h3{
+              font-size: 0.2rem;
+              margin-top: .16rem;
+              color:rgb(147,153,159);
+              i{
+                margin-left: 0.24rem;
+              }
+            }
+            p{
+              font-size:0.28rem;
+              color:rgb(255,0,0);
+              line-height: 0.48rem;
+              i{
+                font-size:0.20rem
+              }
+              s{
+                color:rgb(147,153,159);
+                font-size:0.20rem;
+                margin-left: 0.16rem;
+              }
+            }
+            .jian{
+              position: absolute;
+              width:0.48rem;
+              height:0.48rem;
+              bottom:.36rem;
+              right:1.32rem;
+            }
+            .jia{
+              position: absolute;
+              width:0.48rem;
+              height:0.48rem;
+              right:.36rem;
+              bottom:.36rem;
+            }
+          }
+        }
+      }
+    }
+    .evaluate{
+      display:none;
+      .appraise{
+        display:flex;
+        .grade{
+          width: 2.75rem;
+          margin: 0.36rem 0;
+          border-right:0.04rem solid rgba(7,17,27,0.1);
+          b{
+            font-size:0.48rem;
+            color:rgb(255,153,0);
+            line-height:0.56rem;
+            display:flex;
+            align-items: center;/*垂直居中*/
+            justify-content: center;/*水平居中*/
+          }
+          i{
+            font-size:0.24rem;
+            color:rgb(7,17,27);
+            line-height:0.24rem;
+            margin-top: 0.12rem;
+            display:flex;
+            align-items: center;/*垂直居中*/
+            justify-content: center;/*水平居中*/
+          }
+          span{
+            font-size:0.20rem;
+            color:rgb(7,17,27);
+            line-height:0.2rem;
+            margin-top: 0.16rem;
+            display:flex;
+            align-items: center;/*垂直居中*/
+            justify-content: center;/*水平居中*/
+          }
+        }
+        .star{
+          width: 4.74rem;
+          margin:0.36rem 0.48rem 0.2rem 0.48rem ;
+          b{
+            font-size: 0.24rem;
+            display:flex;
+            align-items: center;/*垂直居中*/
+            padding-bottom: 0.16rem;
+            span{
+              margin:0 0.24rem;
+            }
+            i{
+              font-size: 0.24rem;
+              color:rgb(255,153,0);
+              margin-left:0.24rem;
+
+            }
+          }
+        }
+
+      }
+      p.empty{
+        width: 100%;
+        height: 0.36rem;
+        background-color:#f3f5f7;
+        border-bottom:0.01rem solid rgba(7,17,27,0.1);
+        border-top:0.01rem solid rgba(7,17,27,0.1);
+      }
+      .appraisal-area{
+        display: flex;
+        border-bottom:0.04rem solid rgba(7,17,27,0.1);
+        padding:  0.36rem ;
+        div{
+
+        font-size: 0.24rem;
+        background:#f00;
+        width: 1.2rem;
+        height: .64rem;
+        line-height: .64rem;
+        text-align: center;
+        margin-left: 0.16rem;
+        border-radius:0.06rem;
+
+        }
+      }
+      .select-evaluation{
+        width: 100%;
+        display:flex;
+       padding: 0.24rem 0 ;
+       border-bottom:0.04rem solid rgba(7,17,27,0.1);
+       font-size: 0.24rem;
+       line-height: 0.48rem;
+       color:rgb(147,153,159);
+
+       i{
+        margin-left: 0.36rem;
+         font-size: 0.48rem;
+         line-height: 0.48rem;
+         color:rgb(147,153,159);
+         margin-right: 0.08rem;
+       }
+      }
+      .user-evaluation{
+        display: flex;
+        padding: 0.36rem;
+        img{
+          width: 0.56rem;
+          height: 0.56rem;
+          border-radius:50%;
+        }
+        .user{
+          margin-left: 0.24rem;
+          h3{
+            font-size: 0.2rem;
+            color:rgb(7,17,27);
+            line-height: 0.24rem;
+            margin-bottom: 0.08rem;
+
+          }
+          p{
+            margin-bottom: 0.12rem;
+            font-size: 0.2rem;
+            font-weight: 200;
+            color:rgb(147,153,159);
+            line-height: 0.24rem;
+            span{
+              margin-right: 0.12rem;
+              img{
+                width: 0.2rem;
+                height: 0.2rem;
+              }
+            }
+
+          }
+          h2{
+            font-size: 0.24rem;
+            color:rgb(7,17,27);
+            line-height: 0.36rem;
+          }
+        }
+      }
+    }
+    .b{
+      display:none;
+    }
+  // }
+// }
+.balance{
+  height: 1.04rem;
+  width: 100%;
+  background:#141d27;
+  position: fixed;
+  left: 0;
+  bottom:0;
+  display:flex;
+  z-index:2;
+  .cargo{
+
+      // flex: 1;
+    .cor{
+      width: 0.88rem;
+      height: 0.88rem;
+      background-color:rgba(0,0,0,0.2);
+      border-radius:50%;
+      margin-left:0.36rem;
+      margin-bottom:-0.12rem;
+      border:0.12rem solid #141d27;
+      position: relative;
+      bottom:0.16rem;
+      font-size:0.48rem;
+      color:rgb(255,255,255,0.4);
+      line-height:0.48rem;
+      display:flex;
+      align-items: center;/*垂直居中*/
+      justify-content: center;/*水平居中*/
+    }
+  }
+  b{
+    font-size: 0.32rem;
+      // flex: 0.5;
+      display:flex;
+      align-items: center;/*垂直居中*/
+      margin-left: 0.24rem;
+      padding-right: 0.24rem;
+
+  }
+  b.total{
+      border-right:1px solid rgba(255,255,255,0.1);
+
+  }
+  .money{
+      width: 2.1rem;
+      height: 1.04rem;
+      color:rgb(255,255,255,0.4);
+      background:#f00;
+      b.send{
+      height: 1.04rem;
+        font-size:0.24rem;
+        line-height:0.48rem;
+      display:flex;
+      align-items: center;/*垂直居中*/
+      justify-content: center;/*水平居中*/
+      }
+    }
+}
